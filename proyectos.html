@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale1.0">
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ezpesoft &#8212; Make useful tools and system" />
+    <meta property="og:description" content="Ezpesoft" />
+    <meta property="og:url" content="Ezpesoft" />
+    <meta property="og:site_name" content="Ezpesoft" />
+    <link rel="shortcut icon" href="logo.png">
+    <title>Proyectos | Ezpesoft</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .intro {
+            background-image: url('fondointro.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-top: -60px;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .textointro {
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            width: fit-content;
+            animation: blink-caret 0.75s step-end infinite;
+            font-size: 100px;
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+
+
+        .option {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .ciencia {
+            background-color: #6ab7ff;
+        }
+
+    </style>
+
+    <script>
+        const texto = "Proyectos";
+        let i = 0;
+        const velocidad = 120;
+
+        function escribirTexto() {
+            if (i < texto.length) {
+                document.getElementById("typewriter").innerHTML += texto.charAt(i);
+                i++;
+                setTimeout(escribirTexto, velocidad);
+            } else {
+                document.getElementById("typewriter").style.borderRight = '';
+            }
+        }
+
+        window.onload = escribirTexto;
+
+    </script>
+</head>
+
+<body>
+    <div class="intro">
+        <center>
+            <h1 class="textointro" id="typewriter"></h1>
+            <script src="script.js"></script>
+            <h2 style="margin-top: -20px; font-size: 40px;">Creaciones de Ezpesoft</h3>
+        </center>
+    </div>
+
+    <div style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  font-size: 25px;">
+        <center>
+            
+            <a href="proyectos.html" class="option ciencia">
+                <span class="option-text">
+                    <font color="black">Volver</font>
+                </span>
+            </a>
+        </center>
+    </div>
+
+
+
+    <div class="pros">
+        <center>
+            <a href="fixyourpc.vercel.app" style="margin-right: 20px;"><img src="fixyourpc.png" draggable="false"></a>
+            <a href="https://mega.nz/file/qZQByayR#MBGaLDuhS1uTsHPuThDorj5JUZUj9sV1J5hEPufdp1M"style="margin-right: 20px;"><img src="OptiXOS.png" draggable="false"></a>
+            <a href="tisklast.vercel.app"><img src="tisklast.png" draggable="false"></a>
+        </center>
+    </div>
+
+
+    
+</body>
+
+</html>
